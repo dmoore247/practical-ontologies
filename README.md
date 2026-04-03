@@ -1,4 +1,3 @@
-%md
 ## Synthetic Visit Occurrence — Liver Disease
 
 ### Ontology Lookup Service (OLS) via MCP
