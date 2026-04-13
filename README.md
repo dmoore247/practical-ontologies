@@ -17,3 +17,10 @@ This approach guarantees that derived tables inherit the governance posture of t
 
 ### Workflow Diagram
 ![Alt text](images/databricks-ontology-architecture-diagram.png)
+
+## Ontology Viewer
+
+[Code](notebooks/ontology-viewer)
+
+<img width="2428" height="898" alt="image" src="https://github.com/user-attachments/assets/7971a118-2230-4aa0-a183-4dfa6bb82107" />
+
