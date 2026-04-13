@@ -1,0 +1,201 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix viz: <http://example.com/pharma/viz#> .
+@prefix vtx: <http://example.com/pharma/domain#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+viz:ADMEStyle a viz:StyleRule ;
+    rdfs:label "ADME" ;
+    viz:appliesTo vtx:ADMEAssay ;
+    viz:childSize 18 ;
+    viz:color "#00CED1" ;
+    viz:iconCode "\uF0EC" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 34 .
+
+viz:APPLStyle a viz:StyleRule ;
+    rdfs:label "APPL" ;
+    viz:appliesTo vtx:ApplicabilityMatrix ;
+    viz:childSize 22 ;
+    viz:color "#E6E600" ;
+    viz:iconCode "\uF00A" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 38 .
+
+viz:APPROVEDStyle a viz:StyleRule ;
+    rdfs:label "APPROVED" ;
+    viz:appliesTo vtx:ApprovedDrug ;
+    viz:childSize 24 ;
+    viz:color "#00FF00" ;
+    viz:iconCode "\uF46B" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 32 .
+
+viz:COMPStyle a viz:StyleRule ;
+    rdfs:label "COMP" ;
+    viz:appliesTo vtx:ComputationalMethod ;
+    viz:childSize 18 ;
+    viz:color "#708090" ;
+    viz:iconCode "\uF085" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 26 .
+
+viz:DISEASEStyle a viz:StyleRule ;
+    rdfs:label "DISEASE" ;
+    viz:appliesTo vtx:Disease ;
+    viz:childSize 22 ;
+    viz:color "#4682B4" ;
+    viz:iconCode "\uF21E" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 28 .
+
+viz:DetMethodStyle a viz:StyleRule ;
+    rdfs:label "DetMethod" ;
+    viz:appliesTo vtx:DetectionMethod ;
+    viz:childSize 18 ;
+    viz:color "#FF69B4" ;
+    viz:iconCode "\uF06E" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 32 .
+
+viz:EdgeDefault a viz:StyleRule ;
+    rdfs:label "Default edge style" ;
+    viz:color "#555555" ;
+    viz:width "1.5"^^xsd:float .
+
+viz:Edge_RO_0002436 a viz:StyleRule ;
+    viz:appliesToPredicate <http://purl.obolibrary.org/obo/RO_0002436> ;
+    viz:color "#4682B488" ;
+    viz:width "1.8"^^xsd:float .
+
+viz:Edge_RO_0002449 a viz:StyleRule ;
+    viz:appliesToPredicate <http://purl.obolibrary.org/obo/RO_0002449> ;
+    viz:color "#00808099" ;
+    viz:width "1.5"^^xsd:float .
+
+viz:Edge_RO_0002450 a viz:StyleRule ;
+    viz:appliesToPredicate <http://purl.obolibrary.org/obo/RO_0002450> ;
+    viz:color "#00808099" ;
+    viz:width "1.5"^^xsd:float .
+
+viz:Edge_RO_0002606 a viz:StyleRule ;
+    viz:appliesToPredicate <http://purl.obolibrary.org/obo/RO_0002606> ;
+    viz:color "#4682B488" ;
+    viz:width "1.8"^^xsd:float .
+
+viz:Edge_develops a viz:StyleRule ;
+    viz:appliesToPredicate vtx:develops ;
+    viz:color "#FF634788" ;
+    viz:dashed true ;
+    viz:width "1.8"^^xsd:float .
+
+viz:Edge_hasModality a viz:StyleRule ;
+    viz:appliesToPredicate vtx:hasModality ;
+    viz:color "#9370DB77" ;
+    viz:dashed true ;
+    viz:width "1.2"^^xsd:float .
+
+viz:Edge_markets a viz:StyleRule ;
+    viz:appliesToPredicate vtx:markets ;
+    viz:color "#FFD70088" ;
+    viz:width "2.0"^^xsd:float .
+
+viz:Edge_subClassOf a viz:StyleRule ;
+    viz:appliesToPredicate rdfs:subClassOf ;
+    viz:color "#FFFFFF33" ;
+    viz:dashed true ;
+    viz:width "1.0"^^xsd:float .
+
+viz:HUBStyle a viz:StyleRule ;
+    rdfs:label "HUB" ;
+    viz:appliesTo vtx:PharmaceuticalCompany ;
+    viz:childSize 32 ;
+    viz:color "#FFD700" ;
+    viz:iconCode "\uF005" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 55 .
+
+viz:LABStyle a viz:StyleRule ;
+    rdfs:label "LAB" ;
+    viz:appliesTo vtx:LabWorkflowEntity ;
+    viz:childSize 18 ;
+    viz:color "#228B22" ;
+    viz:iconCode "\uF0C3" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 22 .
+
+viz:MODALITYStyle a viz:StyleRule ;
+    rdfs:label "MODALITY" ;
+    viz:appliesTo vtx:TreatmentModality ;
+    viz:childSize 20 ;
+    viz:color "#9370DB" ;
+    viz:iconCode "\uF12E" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 26 .
+
+viz:ONTOLOGYStyle a viz:StyleRule ;
+    rdfs:label "ONTOLOGY" ;
+    viz:appliesTo vtx:OntologySource ;
+    viz:childSize 18 ;
+    viz:color "#CD853F" ;
+    viz:iconCode "\uF0E8" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 22 .
+
+viz:PIPELINEStyle a viz:StyleRule ;
+    rdfs:label "PIPELINE" ;
+    viz:appliesTo vtx:PipelineTherapy ;
+    viz:childSize 22 ;
+    viz:color "#FFCC00" ;
+    viz:iconCode "\uF46B" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 28 .
+
+viz:ReadoutStyle a viz:StyleRule ;
+    rdfs:label "Readout" ;
+    viz:appliesTo vtx:ReadoutContent ;
+    viz:childSize 18 ;
+    viz:color "#7B68EE" ;
+    viz:iconCode "\uF080" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 30 .
+
+viz:STYPEStyle a viz:StyleRule ;
+    rdfs:label "STYPE" ;
+    viz:appliesTo vtx:SampleType ;
+    viz:childSize 20 ;
+    viz:color "#32CD32" ;
+    viz:iconCode "\uF1FB" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 26 .
+
+viz:TARGETStyle a viz:StyleRule ;
+    rdfs:label "TARGET" ;
+    viz:appliesTo vtx:MolecularTarget ;
+    viz:childSize 18 ;
+    viz:color "#008080" ;
+    viz:iconCode "\uF140" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 25 .
+
+viz:TOXStyle a viz:StyleRule ;
+    rdfs:label "TOX" ;
+    viz:appliesTo vtx:ToxicityAssay ;
+    viz:childSize 18 ;
+    viz:color "#FFD700" ;
+    viz:iconCode "\uF071" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 28 .
+
+viz:TTYPEStyle a viz:StyleRule ;
+    rdfs:label "TTYPE" ;
+    viz:appliesTo vtx:TestType ;
+    viz:childSize 18 ;
+    viz:color "#1E90FF" ;
+    viz:iconCode "\uF03A" ;
+    viz:iconFace "FontAwesome" ;
+    viz:parentSize 24 .
+
+viz:StyleRule a owl:Class ;
+    rdfs:label "Visualization Style Rule" .
+
