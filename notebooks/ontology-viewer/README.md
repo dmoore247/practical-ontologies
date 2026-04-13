@@ -1,10 +1,10 @@
 # Pharma Domain Model — Ontology Viewer
 
-An interactive RDF-driven ontology viewer for pharmaceutical pre-clinical domain models, built with **rdflib** and **PyVis**.
+An interactive RDF-driven ontology viewer for pharmaceutical pre-clinical domain models, built with **rdflib** and **pyvis**.
 
 ## Overview
 
-This project visualizes a pharmaceutical domain model covering the Sample-Test-Result (STR) data lifecycle across 16 interconnected layers — from approved drugs and pipeline therapies down through molecular targets, lab workflows, assay types, and detection methods.
+This project visualizes a pharmaceutical domain model covering the a process flow across 16 interconnected layers — from approved drugs and pipeline therapies down through molecular targets, lab workflows, assay types, and detection methods.
 
 ## Architecture
 
