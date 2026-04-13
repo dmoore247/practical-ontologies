@@ -1,0 +1,59 @@
+<!--
+  Filter Panel for Domain Ontology Viewer
+  ========================================
+  Injected into PyVis HTML output by the render cell.
+  - Font Awesome 7.2.0 CDN link   → injected into <head>
+  - Loading bar CSS override     → injected into <head>
+  - Filter panel div             → injected into <body>
+-->
+
+<!-- ── Head Injections ─────────────────────────────────────────────────── -->
+
+<!-- Font Awesome 7.2.0 Free CDN (icon webfont used by vis.js icon-shaped nodes) -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"
+      integrity="sha384-EXatlQyrOJgDaM9/a74ArMzy7/2bTMSrZj8ID1IPeVmc3GncfCugefCFWSLj8JL/"
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Canvas-friendly font alias: maps "FA7Solid" to FA7 solid woff2 without requiring font-weight -->
+<style>
+@font-face {
+    font-family: "FA7Solid";
+    font-style: normal;
+    font-display: block;
+    src: url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/webfonts/fa-solid-900.woff2") format("woff2");
+}
+</style>
+
+<!-- Force-hide PyVis loading bar (gets stuck at 100% in Databricks iframe) -->
+<style>#loadingBar { display: none !important; }</style>
+
+<!-- ── Body Injection ──────────────────────────────────────────────────── -->
+
+<!-- Layer filter panel — rows are populated dynamically by filter.js -->
+<div id="filterPanel" style="
+  position: fixed; top: 10px; left: 10px; z-index: 9999;
+  background: rgba(26,26,46,0.95); border: 1px solid #555; border-radius: 8px;
+  padding: 14px 12px; width: 230px; max-height: 90vh; overflow-y: auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+
+  <div style="color:#fff; font-weight:700; font-size:14px; margin-bottom:10px;
+    border-bottom:1px solid #555; padding-bottom:6px;">Layer Filters</div>
+
+  <div id="filterRows"></div>
+
+  <div style="margin-top:10px; display:flex; gap:5px;">
+    <button id="btnShowAll" style="flex:1; padding:5px 0; background:#666; color:#fff;
+      border:none; border-radius:4px; cursor:pointer; font-size:11px; font-weight:600;"
+      onmouseenter="this.style.background='#888'"
+      onmouseleave="this.style.background='#666'">Show All</button>
+    <button id="btnHideAll" style="flex:1; padding:5px 0; background:#555; color:#fff;
+      border:none; border-radius:4px; cursor:pointer; font-size:11px; font-weight:600;"
+      onmouseenter="this.style.background='#777'"
+      onmouseleave="this.style.background='#555'">Hide All</button>
+    <button id="btnCenter" style="flex:1; padding:5px 0; background:#777; color:#fff;
+      border:none; border-radius:4px; cursor:pointer; font-size:11px; font-weight:600;"
+      onmouseenter="this.style.background='#999'"
+      onmouseleave="this.style.background='#777'">Center</button>
+  </div>
+</div>

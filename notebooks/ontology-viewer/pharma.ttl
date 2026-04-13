@@ -1,0 +1,1806 @@
+@prefix bao: <http://www.bioassayontology.org/bao#> .
+@prefix ns1: <http://example.com/pharma/domain#Toxicity/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtx: <http://example.com/pharma/domain#> .
+
+<http://purl.allotrope.org/ontologies/result#AFR_0002231> a vtx:LabWorkflowEntity ;
+    rdfs:label "Plate Well Count" ;
+    vtx:quantifies <http://purl.allotrope.org/ontologies/result#AFR_0002888> ;
+    rdfs:comment "AFO:AFR_0002231 — Number of well positions on a plate" .
+
+<http://purl.allotrope.org/ontologies/result#AFR_0002232> a vtx:LabWorkflowEntity ;
+    rdfs:label "Well Volume" ;
+    vtx:quantifies vtx:well ;
+    rdfs:comment "AFO:AFR_0002232 — Quantifies material volume per well" .
+
+obo:OBI_0302716 a vtx:LabWorkflowEntity ;
+    rdfs:label "Pool of Specimens" ;
+    rdfs:comment """OBI:0302716 — Mixture of population samples
+Gathered from one or more sample populations""" ;
+    rdfs:subClassOf obo:OBI_0100051 .
+
+vtx:applicableFor a owl:ObjectProperty ;
+    rdfs:label "applicable_for" .
+
+vtx:appliesTo a owl:ObjectProperty ;
+    rdfs:label "applies_to" .
+
+vtx:collectedAs a owl:ObjectProperty ;
+    rdfs:label "collected_as" .
+
+vtx:comp_sim a vtx:ComputationalMethod ;
+    rdfs:label "Computer Simulation" ;
+    vtx:includes <http://edamontology.org/topic_3892> ;
+    rdfs:comment """MeSH:D003198 — Representation of physical systems
+and chemical processes""" .
+
+vtx:compatible a owl:ObjectProperty ;
+    rdfs:label "compatible" .
+
+vtx:compatibleWith a owl:ObjectProperty ;
+    rdfs:label "compatible_with" .
+
+vtx:containsAgent a owl:ObjectProperty ;
+    rdfs:label "contains" .
+
+vtx:correctsProtein a owl:ObjectProperty ;
+    rdfs:label "corrects" .
+
+vtx:deliveryFor a owl:ObjectProperty ;
+    rdfs:label "delivery_for" .
+
+vtx:describedBy a owl:ObjectProperty ;
+    rdfs:label "described_by" .
+
+vtx:develops a owl:ObjectProperty ;
+    rdfs:label "develops" .
+
+vtx:disruptsEnhancer a owl:ObjectProperty ;
+    rdfs:label "disrupts_enhancer" .
+
+vtx:dysfunctionCauses a owl:ObjectProperty ;
+    rdfs:label "dysfunction_causes" .
+
+vtx:encodesProtein a owl:ObjectProperty ;
+    rdfs:label "encodes" .
+
+vtx:expressedAs a owl:ObjectProperty ;
+    rdfs:label "expressed_as" .
+
+vtx:formulates a owl:ObjectProperty ;
+    rdfs:label "formulates" .
+
+vtx:governs a owl:ObjectProperty ;
+    rdfs:label "governs" .
+
+vtx:hasAssayFormat a owl:ObjectProperty ;
+    rdfs:label "has_assay_format" .
+
+vtx:hasAssayStage a owl:ObjectProperty ;
+    rdfs:label "has_assay_stage" .
+
+vtx:hasBioassayType a owl:ObjectProperty ;
+    rdfs:label "has_bioassay_type" .
+
+vtx:hasComponent a owl:ObjectProperty ;
+    rdfs:label "has_component" .
+
+vtx:hasFormat a owl:ObjectProperty ;
+    rdfs:label "has_format" .
+
+vtx:hasModality a owl:ObjectProperty ;
+    rdfs:label "modality" .
+
+vtx:hasStage a owl:ObjectProperty ;
+    rdfs:label "stage" .
+
+vtx:hasType a owl:ObjectProperty ;
+    rdfs:label "has_type" .
+
+vtx:inputTo a owl:ObjectProperty ;
+    rdfs:label "input_to" .
+
+vtx:instanceOf a owl:ObjectProperty ;
+    rdfs:label "instance_of" .
+
+vtx:isFormulation a owl:ObjectProperty ;
+    rdfs:label "is_formulation" .
+
+vtx:loadedInto a owl:ObjectProperty ;
+    rdfs:label "loaded_into" .
+
+vtx:markets a owl:ObjectProperty ;
+    rdfs:label "markets" .
+
+vtx:ont_afo a vtx:OntologySource ;
+    rdfs:label "AFO (Allotrope)" ;
+    vtx:source <http://purl.allotrope.org/ontologies/result#AFR_0001118>,
+        <http://purl.allotrope.org/ontologies/result#AFR_0001218>,
+        <http://purl.allotrope.org/ontologies/result#AFR_0002888> ;
+    rdfs:comment "Allotrope Foundation Ontology — Lab data & analytical workflows" .
+
+vtx:ont_bao a vtx:OntologySource ;
+    rdfs:label "BAO (BioAssay)" ;
+    vtx:source bao:BAO_0000015,
+        bao:BAO_0000035,
+        bao:BAO_0000508,
+        bao:BAO_0002094,
+        bao:BAO_0002169 ;
+    rdfs:comment "BioAssay Ontology — Screening assays, endpoints, HTS" .
+
+vtx:ont_chebi a vtx:OntologySource ;
+    rdfs:label "ChEBI" ;
+    vtx:source obo:CHEBI_233446,
+        obo:CHEBI_66902 ;
+    rdfs:comment "Chemical Entities of Biological Interest — Molecular roles" .
+
+vtx:ont_dron a vtx:OntologySource ;
+    rdfs:label "DRON" ;
+    vtx:source obo:DRON_00087770,
+        obo:DRON_01061597 ;
+    rdfs:comment "Drug Ontology — Drug products & formulations" .
+
+vtx:ont_edam a vtx:OntologySource ;
+    rdfs:label "EDAM" ;
+    vtx:source <http://edamontology.org/topic_3332>,
+        <http://edamontology.org/topic_3892> ;
+    rdfs:comment "EDAM Ontology — Bioinformatics operations & topics" .
+
+vtx:ont_mesh a vtx:OntologySource ;
+    rdfs:label "MeSH" ;
+    vtx:source <http://edamontology.org/topic_3307>,
+        vtx:mol_dock ;
+    rdfs:comment "Medical Subject Headings — Broad biomedical vocabulary" .
+
+vtx:ont_mondo a vtx:OntologySource ;
+    rdfs:label "MONDO" ;
+    vtx:source obo:MONDO_0009061,
+        obo:SCDO_1000106 ;
+    rdfs:comment "Mondo Disease Ontology — Disease classification" .
+
+vtx:ont_ncit a vtx:OntologySource ;
+    rdfs:label "NCIT" ;
+    vtx:source obo:NCIT_C180742,
+        obo:NCIT_C616,
+        vtx:cftr ;
+    rdfs:comment "NCI Thesaurus — Drugs, diseases, genes, anatomy" .
+
+vtx:ont_obi a vtx:OntologySource ;
+    rdfs:label "OBI" ;
+    vtx:source obo:OBI_0000070,
+        obo:OBI_0100051 ;
+    rdfs:comment "Ontology for Biomedical Investigations — Specimens, assays" .
+
+vtx:preparedAs a owl:ObjectProperty ;
+    rdfs:label "prepared_as" .
+
+vtx:produces a owl:ObjectProperty ;
+    rdfs:label "produces" .
+
+vtx:quantifiedBy a owl:ObjectProperty ;
+    rdfs:label "quantified_by" .
+
+vtx:quantifies a owl:ObjectProperty ;
+    rdfs:label "quantifies" .
+
+vtx:screens a owl:ObjectProperty ;
+    rdfs:label "screens" .
+
+vtx:source a owl:ObjectProperty ;
+    rdfs:label "source" .
+
+vtx:supportsDetection a owl:ObjectProperty ;
+    rdfs:label "supports_detection" .
+
+vtx:testedIn a owl:ObjectProperty ;
+    rdfs:label "tested_in" .
+
+vtx:usedIn a owl:ObjectProperty ;
+    rdfs:label "used_in" .
+
+<http://edamontology.org/topic_0176> a vtx:ComputationalMethod ;
+    rdfs:label "Molecular Dynamics" ;
+    vtx:simulates vtx:cftr ;
+    rdfs:comment """EDAM:topic_0176 — Protein conformation simulation
+Force-field based time evolution""" .
+
+<http://edamontology.org/topic_3332> a vtx:ComputationalMethod ;
+    rdfs:label "Computational Chemistry" ;
+    vtx:subfield vtx:cheminf,
+        vtx:mol_dock ;
+    rdfs:comment """EDAM:topic_3332 / MeSH:D000080486 / NCIT:C18470
+Molecular property calculation & simulation""" .
+
+obo:MONDO_0005147 a vtx:Disease ;
+    rdfs:label "Type 1 Diabetes" ;
+    rdfs:comment """MONDO:0005147 — Autoimmune destruction of β-cells
+Insulin-dependent diabetes mellitus""" .
+
+obo:MONDO_0005342 a vtx:Disease ;
+    rdfs:label "IgA Nephropathy" ;
+    rdfs:comment """MONDO:0005342 / MeSH:D005922 — IgA deposition in glomeruli
+Most common primary glomerulonephritis worldwide""" .
+
+obo:MONDO_0016668 a vtx:Disease ;
+    rdfs:label "β-Thalassemia" ;
+    rdfs:comment """MONDO:0016668 — Reduced β-globin chain production
+Severe anemia requiring transfusions""" .
+
+obo:NCIT_C134270 a vtx:ReadoutContent ;
+    rdfs:label "Potency Assay" ;
+    vtx:release_test obo:NCIT_C169042,
+        obo:NCIT_C181923 ;
+    vtx:required_for vtx:st_biologic,
+        vtx:st_cell_therapy ;
+    rdfs:comment """NCIT:C134270 — Determines strength of a material
+by measuring ability to produce a specific response.
+Critical for biologics & cell therapy release testing:
+Casgevy potency, VX-880 islet function.""" .
+
+obo:NCIT_C172787 a vtx:TreatmentModality ;
+    rdfs:label "mRNA Therapeutic" ;
+    rdfs:comment """NCIT:C172787 mRNA platform
+In vitro transcribed mRNA encoding therapeutic proteins""" .
+
+obo:NCIT_C175342 a vtx:TreatmentModality ;
+    rdfs:label "CRISPR-Cas9 Gene Editing" ;
+    rdfs:comment """NCIT:C175342 — Precision genome editing
+Ex vivo editing of HSPCs at BCL11A enhancer""" .
+
+obo:OBI_0000443 a vtx:LabWorkflowEntity ;
+    rdfs:label "Analyte Assay" ;
+    rdfs:comment """OBI:0000443 — Assay measuring specific analyte
+Concentration or activity""" .
+
+obo:OBI_0001479 a vtx:SampleType ;
+    rdfs:label "Tissue / Organ Sample" ;
+    vtx:compatible bao:BAO_0000055,
+        bao:BAO_0000452 ;
+    <http://example.com/pharma/domain#✓> bao:BAO_0000218 ;
+    rdfs:comment """OBI:0001479 — Specimen from organism
+Eligible for: histopathology, biomarker,
+organ-specific tox, tissue distribution""" .
+
+obo:OBI_0400076 a vtx:LabWorkflowEntity ;
+    rdfs:label "Multi-well Plate" ;
+    rdfs:comment """OBI:0400076 — multi-well plate
+General class for plates with multiple wells""" ;
+    rdfs:subClassOf bao:BAO_0000508 .
+
+vtx:ApplicabilityMatrix a owl:Class ;
+    rdfs:label "APPL" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:PharmaceuticalCompany a owl:Class ;
+    rdfs:label "HUB" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:active_ingr a vtx:LabWorkflowEntity ;
+    rdfs:label "Active Ingredient" ;
+    rdfs:comment """Pharmacologically active substance
+in a drug formulation (API)""" .
+
+vtx:bcl11a a vtx:MolecularTarget ;
+    rdfs:label "BCL11A Enhancer" ;
+    rdfs:comment """Erythroid-specific enhancer of BCL11A gene
+CRISPR target to reactivate fetal hemoglobin (HbF)""" .
+
+vtx:brain_penet a vtx:ADMEAssay ;
+    rdfs:label "Brain Penetration" ;
+    rdfs:comment """CNS penetration assessment
+Kp,uu brain-to-plasma ratio""" .
+
+vtx:chromo_ab a vtx:ToxicityAssay ;
+    rdfs:label "Chromosomal Aberration" ;
+    rdfs:comment """In vitro chromosomal aberration assay
+Detects structural/numerical chromosome changes
+Alternative to micronucleus for ICH S2(R1)""" .
+
+vtx:comet a vtx:ToxicityAssay ;
+    rdfs:label "Comet Assay (SCGE)" ;
+    rdfs:comment """Single Cell Gel Electrophoresis
+Detects DNA strand breaks at single-cell level
+In vivo follow-up for positive in vitro genotox""" .
+
+vtx:component a vtx:LabWorkflowEntity ;
+    rdfs:label "Component" ;
+    rdfs:comment """Individual ingredient or constituent
+of a formulation or material""" ;
+    rdfs:subClassOf obo:NCIT_C616,
+        vtx:active_ingr,
+        vtx:excipient .
+
+vtx:distrib a vtx:ADMEAssay ;
+    rdfs:label "Drug Distribution" ;
+    rdfs:comment """Tissue distribution & protein binding
+Determines free drug concentration at target""" ;
+    rdfs:subClassOf vtx:brain_penet,
+        bao:BAO_0002532,
+        bao:BAO_0010135 .
+
+vtx:drug_disc a vtx:ComputationalMethod ;
+    rdfs:label "Drug Discovery" ;
+    vtx:supports obo:NCIT_C180742 ;
+    vtx:uses bao:BAO_0002094 ;
+    rdfs:comment """Computational drug discovery pipeline
+Target ID → Hit finding → Lead optimization""" .
+
+vtx:excipient a vtx:LabWorkflowEntity ;
+    rdfs:label "Excipient" ;
+    rdfs:comment """Inactive ingredient in formulation
+Binders, fillers, coatings, solvents""" .
+
+vtx:form_desc a vtx:LabWorkflowEntity ;
+    rdfs:label "Formulation Description" ;
+    rdfs:comment """Data object describing ingredient composition
+Includes excipients, active ingredients, ratios""" .
+
+vtx:hemolysis a vtx:ToxicityAssay ;
+    rdfs:label "Hemolysis Assay" ;
+    vtx:screens vtx:lnp,
+        vtx:mrna_cf ;
+    rdfs:comment """Measures red blood cell lysis caused by compounds
+Critical safety screen for IV-administered drugs & LNP formulations""" .
+
+vtx:ld50 a vtx:ToxicityAssay ;
+    rdfs:label "LD50" ;
+    rdfs:comment """Lethal Dose 50 — dose causing 50% mortality
+In vivo acute toxicity measure
+Increasingly replaced by alternative methods""" .
+
+vtx:lipid_np a vtx:LabWorkflowEntity ;
+    rdfs:label "Lipid Nanoparticle" ;
+    vtx:deliveryFor vtx:mrna_cf ;
+    vtx:instanceOf vtx:lnp ;
+    vtx:isFormulation <http://purl.allotrope.org/ontologies/result#AFR_0001218> ;
+    rdfs:comment """Lipid-based nanocarrier for nucleic acid delivery
+Formulation: ionizable lipid + PEG-lipid + cholesterol + helper lipid""" .
+
+vtx:mm_sim a vtx:ComputationalMethod ;
+    rdfs:label "Molecular Mechanics" ;
+    rdfs:comment """ECO:0006138 — Energy prediction from conformation
+Force-field based approaches""" .
+
+vtx:mtd a vtx:ToxicityAssay ;
+    rdfs:label "Maximum Tolerated Dose (MTD)" ;
+    rdfs:comment """Dose-finding study to identify highest tolerable dose
+Key input for therapeutic index calculation""" .
+
+vtx:pampa a vtx:ADMEAssay ;
+    rdfs:label "PAMPA" ;
+    rdfs:comment """Parallel Artificial Membrane Permeability Assay
+Artificial lipid membrane — no active transport
+Fastest passive permeability screen""" .
+
+vtx:phototox a vtx:ToxicityAssay ;
+    rdfs:label "Phototoxicity Assay" ;
+    vtx:screens obo:CHEBI_233446,
+        vtx:trikafta ;
+    rdfs:comment """3T3 NRU phototoxicity test (ICH S10)
+Measures UV/vis-induced cytotoxicity
+Required for compounds absorbing 290–700 nm""" .
+
+vtx:qmmm a vtx:ComputationalMethod ;
+    rdfs:label "QM/MM Simulation" ;
+    rdfs:comment """ECO:0006135 — Quantum mechanics + molecular mechanics
+High-accuracy active site modeling""" .
+
+vtx:sample_type_hub a vtx:SampleType ;
+    rdfs:label "Sample Type (N types)" ;
+    vtx:constrained_by vtx:applicability ;
+    vtx:hasType obo:OBI_0001479,
+        vtx:st_biologic,
+        vtx:st_cell_line,
+        vtx:st_cell_therapy,
+        vtx:st_compound,
+        vtx:st_formulation,
+        vtx:st_lnp_form,
+        vtx:st_nucleic,
+        bao:BAO_0020004 ;
+    rdfs:comment """Categorization of material submitted for testing
+Each sample type constrains which tests are applicable""" .
+
+vtx:st_cell_line a vtx:SampleType ;
+    rdfs:label "Cell Line / Primary Cells" ;
+    vtx:compatible bao:BAO_0000005,
+        bao:BAO_0000045,
+        bao:BAO_0000046,
+        bao:BAO_0000163,
+        bao:BAO_0000452 ;
+    <http://example.com/pharma/domain#✓> bao:BAO_0000219 ;
+    rdfs:comment """Living cells used as the assay system
+Eligible for: cell-based format assays only
+Viability, proliferation, reporter, phenotypic""" .
+
+vtx:st_compound a vtx:SampleType ;
+    rdfs:label "Compound / Small Molecule" ;
+    vtx:compatible bao:BAO_0000045,
+        bao:BAO_0000046,
+        bao:BAO_0000049,
+        bao:BAO_0000055,
+        bao:BAO_0000427,
+        bao:BAO_0000657 ;
+    vtx:sample_for vtx:sm ;
+    <http://example.com/pharma/domain#✓> bao:BAO_0000100,
+        bao:BAO_0000218,
+        bao:BAO_0000219,
+        bao:BAO_0000357,
+        bao:BAO_0000366 ;
+    rdfs:comment """Pure chemical entity (API or lead compound)
+Eligible for: biochemical, cell-based, physicochemical,
+ADME, tox, in vivo PK assays""" .
+
+vtx:st_formulation a vtx:SampleType ;
+    rdfs:label "Drug Formulation" ;
+    vtx:refines <http://purl.allotrope.org/ontologies/result#AFR_0001218> ;
+    <http://example.com/pharma/domain#✓> bao:BAO_0000100,
+        bao:BAO_0000218 ;
+    rdfs:comment """Finished or intermediate drug product
+Eligible for: dissolution, stability, content uniformity,
+bioequivalence, formulation-specific assays""" .
+
+vtx:st_lnp_form a vtx:SampleType ;
+    rdfs:label "LNP Formulation" ;
+    vtx:compatible bao:BAO_0000049,
+        bao:BAO_0000055,
+        bao:BAO_0000452 ;
+    vtx:sample_for vtx:mrna_cf ;
+    <http://example.com/pharma/domain#✓> bao:BAO_0000100,
+        bao:BAO_0000218,
+        bao:BAO_0000219 ;
+    rdfs:comment """Lipid nanoparticle drug product
+Eligible for: particle size (DLS), zeta potential,
+encapsulation %, hemolysis, tissue distribution
+NOT eligible for standard small-molecule ADME""" .
+
+vtx:symdeko a vtx:ApprovedDrug ;
+    rdfs:label "Symdeko (tezacaftor/ ivacaftor)" ;
+    obo:RO_0002606 obo:MONDO_0009061 ;
+    vtx:containsAgent obo:CHEBI_66902,
+        vtx:cftr_cor ;
+    vtx:hasModality vtx:sm ;
+    rdfs:comment """MeSH:C000654124 — Next-gen corrector + potentiator · Approved 2018
+CHEBI:234517""" .
+
+vtx:vx_548_crps a vtx:PipelineTherapy ;
+    rdfs:label "VX-548 (chronic pain)" ;
+    obo:RO_0002436 vtx:chronic_pain ;
+    rdfs:comment """Suzetrigine extension into chronic pain indications
+Neuropathic pain, CRPS studies""" .
+
+vtx:vx_pain2 a vtx:PipelineTherapy ;
+    rdfs:label "Next-gen NaV1.8 / NaV1.7" ;
+    obo:RO_0002436 vtx:acute_pain,
+        vtx:chronic_pain ;
+    obo:RO_0002449 obo:NCIT_C114811,
+        vtx:nav18 ;
+    rdfs:comment """Follow-on pain programs targeting voltage-gated sodium channels
+SCN10A (NaV1.8) · SCN9A (NaV1.7)""" .
+
+bao:BAO_0000001 a vtx:DetectionMethod ;
+    rdfs:label "FRET" ;
+    vtx:readout_for bao:BAO_0010123 ;
+    rdfs:comment """BAO:0000001 — Fluorescence Resonance Energy Transfer
+Donor→Acceptor energy transfer within <10nm
+Subclasses: TR-FRET (HTRF/LANCE), SNAP-tag, PerkinElmer""" .
+
+bao:BAO_0000003 a vtx:DetectionMethod ;
+    rdfs:label "Fluorescence Polarization (FP)" ;
+    vtx:readout_for bao:BAO_0010159 ;
+    rdfs:comment """BAO:0000003 — Rotational motion-based binding assay
+Small fluorescent tracer binds large target → high polarization
+Widely used for kinase, protease & PPI assays""" .
+
+bao:BAO_0000006 a vtx:ToxicityAssay ;
+    rdfs:label "% Cytotoxicity" ;
+    rdfs:comment """BAO:0000006 — Percent cytotoxicity endpoint
+Normalized to positive/negative controls
+BAO:0000588 = 50% cytotoxicity threshold""" .
+
+bao:BAO_0000019 a vtx:TestType ;
+    rdfs:label "Assay Format" ;
+    vtx:governs vtx:applicability ;
+    vtx:hasFormat bao:BAO_0000100,
+        bao:BAO_0000218,
+        bao:BAO_0000219,
+        bao:BAO_0000357,
+        bao:BAO_0000366 ;
+    rdfs:comment """BAO:0000019 — Conceptualization of assays based on
+biological/chemical features of experimental system""" .
+
+bao:BAO_0000029 a vtx:TestType ;
+    rdfs:label "Screening Campaign Stage" ;
+    vtx:governs vtx:applicability ;
+    vtx:has_stage bao:BAO_0000030,
+        bao:BAO_0000031,
+        bao:BAO_0000032,
+        bao:BAO_0000803,
+        bao:BAO_0010025 ;
+    rdfs:comment """BAO:0000029 — Purpose & order of assay in drug discovery
+Determines which assays are run at each stage
+Primary → Confirmatory → Secondary → Preclinical""" .
+
+bao:BAO_0000051 a vtx:DetectionMethod ;
+    rdfs:label "Chemiluminescence" ;
+    vtx:readout_for vtx:hepatotox ;
+    rdfs:comment """BAO:0000051 — Light from synthetic oxidation reactions
+ELISA-CL, Western blot-CL, high-sensitivity immunoassays""" .
+
+bao:BAO_0000058 a vtx:DetectionMethod ;
+    rdfs:label "Thermal Shift (DSF)" ;
+    vtx:screens vtx:cftr ;
+    rdfs:comment """BAO:0000058 — Differential Scanning Fluorimetry
+Protein unfolding temperature shift upon ligand binding
+Hit validation & target engagement for CFTR modulators""" .
+
+bao:BAO_0000071 a vtx:DetectionMethod ;
+    rdfs:label "Transmittance" ;
+    rdfs:comment """BAO:0000071 — Ratio of transmitted to incident light (T = I/I₀)
+Turbidity, particle sizing, dissolution monitoring""" .
+
+bao:BAO_0000130 a vtx:DetectionMethod ;
+    rdfs:label "AlphaScreen" ;
+    vtx:readout_for bao:BAO_0000015 ;
+    rdfs:comment """BAO:0000130 — Amplified Luminescent Proximity Homogeneous Assay
+Donor/acceptor bead proximity → singlet oxygen cascade → 520-620nm
+PPI, kinase, epigenetics — no-wash, miniaturizable to 1536""" .
+
+bao:BAO_0000136 a vtx:ReadoutContent ;
+    rdfs:label "Single Repetition" ;
+    vtx:typical_for bao:BAO_0000031 ;
+    rdfs:comment """BAO:0000136 — One measurement per compound per conc.
+Fastest throughput, used in primary HTS.
+Z' > 0.5 required for reliable hit calling.""" .
+
+bao:BAO_0000137 a vtx:ReadoutContent ;
+    rdfs:label "Multiple Repetitions" ;
+    vtx:typical_for bao:BAO_0000030 ;
+    rdfs:comment """BAO:0000137 — Replicate measurements (n=2–4 typical).
+Confirmatory & secondary screens.
+Enables statistical significance & error estimation.""" .
+
+bao:BAO_0000160 a vtx:DetectionMethod ;
+    rdfs:label "NMR" ;
+    vtx:informs <http://edamontology.org/topic_0082> ;
+    rdfs:comment """BAO:0000160 — Nuclear Magnetic Resonance
+Protein-ligand binding by chemical shift perturbation
+Fragment screening, structure determination""" .
+
+bao:BAO_0000161 a vtx:DetectionMethod ;
+    rdfs:label "Circular Dichroism" ;
+    vtx:characterizes vtx:st_biologic,
+        vtx:st_nucleic ;
+    rdfs:comment """BAO:0000161 — Chiral interaction with polarized light
+Protein secondary structure, conformational stability
+Biologic & mRNA product characterization""" .
+
+bao:BAO_0000184 a vtx:ReadoutContent ;
+    rdfs:label "Image-Based Readout (HCS)" ;
+    vtx:analyzed_by <http://edamontology.org/topic_3307> ;
+    vtx:readout_via bao:BAO_0002526 ;
+    vtx:uses_detection bao:BAO_0000452 ;
+    rdfs:comment """BAO:0000184 — High Content Screening.  Automated imaging
++ analysis: 10s–100s of parameters per cell.
+Morphology, translocation, phenotypic profiling.
+Cell Painting for CFTR correctors & toxicity.""" .
+
+bao:BAO_0000187 a vtx:ToxicityAssay ;
+    rdfs:label "CC50" ;
+    rdfs:comment """BAO:0000187 — 50% cytotoxic concentration
+Effective concentration producing 50% max cell death
+Key selectivity metric: CC50 / IC50 = therapeutic index""" ;
+    rdfs:subClassOf bao:BAO_0000179 .
+
+bao:BAO_0000202 a vtx:ToxicityAssay ;
+    rdfs:label "% Cell Viability" ;
+    rdfs:comment """BAO:0000202 — Percent cell viability endpoint
+100 − % cytotoxicity
+CellTiter-Glo, alamarBlue, MTT readouts""" .
+
+bao:BAO_0000404 a vtx:DetectionMethod ;
+    rdfs:label "X-ray Crystallography" ;
+    vtx:informs <http://edamontology.org/topic_0082> ;
+    vtx:validates vtx:mol_dock ;
+    rdfs:comment """BAO:0000404 — Protein-compound co-crystal diffraction
+Definitive binding mode & structure-based drug design
+Essential for CFTR modulator optimization""" .
+
+bao:BAO_0000409 a vtx:ReadoutContent ;
+    rdfs:label "Measurement Type" ;
+    rdfs:comment """BAO:0000409 — Temporal & functional nature of measurement.
+Endpoint (static snapshot) vs Kinetic (time-course)
+vs Concentration-Response (dose-response curve)
+vs Potency (strength determination).""" ;
+    rdfs:subClassOf obo:NCIT_C134270,
+        bao:BAO_0000410,
+        bao:BAO_0000411,
+        bao:BAO_0010258 .
+
+bao:BAO_0000410 a vtx:ReadoutContent ;
+    rdfs:label "Endpoint Assay" ;
+    vtx:typical_method bao:BAO_0000050,
+        bao:BAO_0000070 ;
+    rdfs:comment """BAO:0000410 — Static response at a fixed time point.
+No time dimension in reported result.
+Cell viability at 72h, % inhibition at 24h.
+Most common HTS measurement type.""" .
+
+bao:BAO_0000411 a vtx:ReadoutContent ;
+    rdfs:label "Kinetic Assay" ;
+    vtx:typical_method bao:BAO_0000057,
+        bao:BAO_0000163 ;
+    rdfs:comment """BAO:0000411 — Time-course measurement; result has
+temporal component: rate constant, Km, Vmax.
+Enzyme kinetics, real-time calcium flux (FLIPR),
+SPR binding kinetics (ka, kd).""" .
+
+bao:BAO_0000428 a vtx:DetectionMethod ;
+    rdfs:label "ITC (Isothermal Calorimetry)" ;
+    rdfs:comment """BAO:0000428 — Direct thermodynamic binding measurement
+Ka, ΔH, ΔS, stoichiometry — label-free, in-solution""" .
+
+bao:BAO_0000456 a vtx:DetectionMethod ;
+    rdfs:label "QCM" ;
+    rdfs:comment """BAO:0000456 — Quartz Crystal Microbalance
+Piezoelectric frequency shift on mass deposition
+Cell adhesion, receptor-ligand, polymer films""" .
+
+bao:BAO_0000513 a vtx:LabWorkflowEntity ;
+    rdfs:label "96-Well Plate" ;
+    rdfs:comment "BAO:0000513 — Suitable for low-throughput assay" .
+
+bao:BAO_0000515 a vtx:LabWorkflowEntity ;
+    rdfs:label "384-Well Plate" ;
+    rdfs:comment "BAO:0000515 — Suitable for HTS assay" .
+
+bao:BAO_0000516 a vtx:LabWorkflowEntity ;
+    rdfs:label "1536-Well Plate" ;
+    rdfs:comment "BAO:0000516 — Highly miniaturized, few µL volumes" .
+
+bao:BAO_0000532 a vtx:ReadoutContent ;
+    rdfs:label "Measurement Throughput" ;
+    vtx:has_axis bao:BAO_0002177,
+        bao:BAO_0002178 ;
+    rdfs:comment """BAO:0000532 — Describes the quality/quantity of
+measurements per sample: concentration design
+(single vs dose-response) × replication design
+(single vs multiple replicates).""" .
+
+bao:BAO_0000534 a vtx:ReadoutContent ;
+    rdfs:label "Single Readout" ;
+    vtx:typical_readout bao:BAO_0000050,
+        bao:BAO_0000070,
+        bao:BAO_0000363 ;
+    rdfs:comment """BAO:0000534 — Typical HTS assay: plate reader generates
+1–2 readout values per well.  Simplest data structure,
+highest throughput.  ~80% of primary screens.""" .
+
+bao:BAO_0000535 a vtx:ReadoutContent ;
+    rdfs:label "Multiple Concentration" ;
+    vtx:typical_for bao:BAO_0000030,
+        bao:BAO_0000032 ;
+    rdfs:comment """BAO:0000535 — Dose-response / concentration-response.
+qHTS (quantitative HTS): 7–16 point curves.
+Generates IC50, EC50, Hill slope, Emax.""" .
+
+bao:BAO_0000536 a vtx:ReadoutContent ;
+    rdfs:label "Single Concentration" ;
+    vtx:typical_for bao:BAO_0000031 ;
+    rdfs:comment """BAO:0000536 — One concentration per compound.
+Typical for primary HTS: binary active/inactive call.
+~1M compounds × 1 conc × 1 rep = maximum throughput.""" .
+
+bao:BAO_0000564 a vtx:ReadoutContent ;
+    rdfs:label "Multiplexed Readout" ;
+    vtx:readout_via bao:BAO_0000005,
+        bao:BAO_0000046 ;
+    rdfs:comment """BAO:0000564 — Multiple targets measured simultaneously
+from one well using differentially-labeled probes.
+Luminex bead arrays, Meso Scale Discovery (MSD).
+Cytokine panels, PK multiplexing.""" .
+
+bao:BAO_0000576 a vtx:LabWorkflowEntity ;
+    rdfs:label "24-Well Plate" ;
+    rdfs:comment "BAO:0000576 — Suitable for low-throughput assay" .
+
+bao:BAO_0000803 a vtx:TestType ;
+    rdfs:label "Counter Screen" ;
+    vtx:parallel_to bao:BAO_0000032 ;
+    rdfs:comment """BAO:0000803 — Eliminates artifacts & false positives
+Cytotox counter-screen, fluorescence interference
+Runs parallel to secondary stage""" .
+
+bao:BAO_0002067 a vtx:ReadoutContent ;
+    rdfs:label "Readout Type" ;
+    rdfs:comment """BAO:0002067 — Nature of the reported value from an assay.
+Raw instrument output vs derived calculation vs
+multi-dimensional profile (spectrum, image features).""" ;
+    rdfs:subClassOf bao:BAO_0002068,
+        bao:BAO_0002069,
+        bao:BAO_0002070 .
+
+bao:BAO_0002068 a vtx:ReadoutContent ;
+    rdfs:label "Calculated Value" ;
+    vtx:derives bao:BAO_0000179 ;
+    rdfs:comment """BAO:0002068 — Derived from raw measurements.
+% Inhibition, % Activity, Z-score,
+IC50, EC50, Ki, Kd — the interpretable result.""" .
+
+bao:BAO_0002069 a vtx:ReadoutContent ;
+    rdfs:label "Measured Profile" ;
+    vtx:inputTo vtx:cheminf ;
+    vtx:output_of bao:BAO_0000055 ;
+    rdfs:comment """BAO:0002069 — Multi-dimensional data output.
+Mass spectra, chromatograms, image feature vectors,
+gene expression signatures, Cell Painting profiles.""" .
+
+bao:BAO_0002070 a vtx:ReadoutContent ;
+    rdfs:label "Measured Value" ;
+    vtx:produces vtx:result_datum ;
+    rdfs:comment """BAO:0002070 — Raw instrument output value.
+Fluorescence intensity (RFU), luminescence (RLU),
+absorbance (OD), counts per minute (CPM).
+Input to normalization & curve-fitting.""" .
+
+bao:BAO_0002177 a vtx:ReadoutContent ;
+    rdfs:label "Concentration Throughput" ;
+    rdfs:comment """BAO:0002177 — Number of concentrations tested per compound.
+Determines whether assay yields binary hit/miss
+or full dose-response curve (IC50/EC50).""" ;
+    rdfs:subClassOf bao:BAO_0000535,
+        bao:BAO_0000536 .
+
+bao:BAO_0002178 a vtx:ReadoutContent ;
+    rdfs:label "Repetition Throughput" ;
+    rdfs:comment """BAO:0002178 — Number of replicate measurements per condition.
+Governs statistical power and assay quality (Z').""" ;
+    rdfs:subClassOf bao:BAO_0000136,
+        bao:BAO_0000137 .
+
+bao:BAO_0002188 a vtx:ADMEAssay ;
+    rdfs:label "Drug-Drug Interaction" ;
+    rdfs:comment """BAO:0002188 — Drug interaction assay
+CYP/transporter-mediated DDI potential""" ;
+    rdfs:subClassOf bao:BAO_0003008,
+        bao:BAO_0010149,
+        bao:BAO_0010159,
+        bao:BAO_0010169 .
+
+bao:BAO_0002189 a vtx:ADMEAssay ;
+    rdfs:label "Toxicity Assay" ;
+    vtx:classified_as bao:BAO_0013018 ;
+    vtx:reactive_metabolite bao:BAO_0010245 ;
+    rdfs:comment """BAO:0002189 — General toxicity assessment
+In vitro cytotoxicity, genotoxicity (Ames)""" ;
+    rdfs:subClassOf vtx:cardiotox,
+        vtx:hepatotox,
+        vtx:phototox,
+        bao:BAO_0000008,
+        bao:BAO_0002167,
+        bao:BAO_0002993,
+        bao:BAO_0013053 .
+
+bao:BAO_0002525 a vtx:DetectionMethod ;
+    rdfs:label "Tomography" ;
+    vtx:readout_for vtx:invivo_tox,
+        bao:BAO_0002532 ;
+    rdfs:comment """BAO:0002525 — Cross-sectional imaging (µCT, PET, SPECT)
+In vivo imaging for biodistribution & efficacy studies""" .
+
+bao:BAO_0002529 a vtx:DetectionMethod ;
+    rdfs:label "Atomic Absorption Spectrophotometry" ;
+    rdfs:comment """BAO:0002529 — Elemental analysis via atomic vapor absorption
+Metal contamination testing, elemental impurities (ICH Q3D)""" .
+
+bao:BAO_0002533 a vtx:ADMEAssay ;
+    rdfs:label "Safety Pharmacology" ;
+    rdfs:comment """BAO:0002533 — Safety pharmacology assay panel
+Cardiac, respiratory, CNS safety""" ;
+    rdfs:subClassOf vtx:cardiotox,
+        bao:BAO_0002189,
+        bao:BAO_0013041 .
+
+bao:BAO_0002969 a vtx:ReadoutContent ;
+    rdfs:label "Readout Parameter" ;
+    vtx:specifies bao:BAO_0000040 ;
+    rdfs:comment """BAO:0002969 — The specific observable being quantified.
+Intensity, count, morphology, translocation, area,
+texture — parameters extracted from HCS image analysis
+or plate-reader raw signals.""" .
+
+bao:BAO_0003008 a vtx:ADMEAssay ;
+    rdfs:label "Transporter Assay" ;
+    rdfs:comment """BAO:0003008 — Membrane transporter assessment
+P-gp, BCRP, OATP, OAT, OCT substrates""" ;
+    rdfs:subClassOf bao:BAO_0010189,
+        bao:BAO_0010205 .
+
+bao:BAO_0010006 a vtx:ADMEAssay ;
+    rdfs:label "Microsomal Stability" ;
+    rdfs:comment """BAO:0010006 — Liver microsome incubation
+CYP-mediated Phase I metabolism
+% recovery or t½ across species""" .
+
+bao:BAO_0010082 a vtx:ADMEAssay ;
+    rdfs:label "Drug Absorption" ;
+    rdfs:comment """BAO:0010082 — Drug absorption assay
+Intestinal uptake & oral bioavailability""" ;
+    rdfs:subClassOf bao:BAO_0010010,
+        bao:BAO_0010083 .
+
+bao:BAO_0010083 a vtx:ADMEAssay ;
+    rdfs:label "Permeability Assay" ;
+    rdfs:comment """BAO:0010083 — Measures compound passage
+across biological membrane barriers""" ;
+    rdfs:subClassOf vtx:pampa,
+        bao:BAO_0010008,
+        bao:BAO_0010089 .
+
+bao:BAO_0010089 a vtx:ADMEAssay ;
+    rdfs:label "MDCKII Permeability" ;
+    rdfs:comment """BAO:0010089 — Madin-Darby canine kidney II
+Rapid polarized barrier for Papp measurement
+High-throughput passive permeability screen""" .
+
+bao:BAO_0010090 a vtx:ADMEAssay ;
+    rdfs:label "Drug Metabolism" ;
+    rdfs:comment """BAO:0010090 — In vitro metabolic clearance
+and metabolite characterization""" ;
+    rdfs:subClassOf bao:BAO_0010091,
+        bao:BAO_0010095,
+        bao:BAO_0010123 .
+
+bao:BAO_0010100 a vtx:ADMEAssay ;
+    rdfs:label "Hepatocyte Stability" ;
+    rdfs:comment """BAO:0010100 — Whole-cell metabolic clearance
+Phase I + Phase II metabolism
+More physiologically relevant than microsomes""" ;
+    rdfs:subClassOf bao:BAO_0010101 .
+
+bao:BAO_0010101 a vtx:ADMEAssay ;
+    rdfs:label "Hepatocyte Low-Clearance" ;
+    rdfs:comment """BAO:0010101 — Relay assay for slowly-cleared compounds
+Extended incubation with cell replenishment""" .
+
+bao:BAO_0010139 a vtx:ADMEAssay ;
+    rdfs:label "Drug Excretion" ;
+    rdfs:comment """BAO:0010139 — Drug excretion assay
+Elimination routes: biliary, renal, fecal""" ;
+    rdfs:subClassOf bao:BAO_0010140 .
+
+bao:BAO_0010140 a vtx:ADMEAssay ;
+    rdfs:label "Mass Balance Assay" ;
+    rdfs:comment """BAO:0010140 — Quantifies total recovery
+across all excretion routes""" ;
+    rdfs:subClassOf bao:BAO_0010141,
+        bao:BAO_0010143 .
+
+bao:BAO_0010141 a vtx:ADMEAssay ;
+    rdfs:label "Biliary Excretion" ;
+    rdfs:comment """BAO:0010141 — Hepatobiliary elimination
+Sandwich-cultured hepatocyte BEI assay""" .
+
+bao:BAO_0010143 a vtx:ADMEAssay ;
+    rdfs:label "Renal Excretion" ;
+    rdfs:comment """BAO:0010143 — Kidney elimination pathway
+Glomerular filtration & tubular secretion""" .
+
+bao:BAO_0010149 a vtx:ADMEAssay ;
+    rdfs:label "CYP Induction" ;
+    rdfs:comment """BAO:0010149 — Enzyme induction via nuclear receptors
+PXR/CAR-mediated CYP3A4/1A2/2B6 upregulation""" .
+
+bao:BAO_0010169 a vtx:ADMEAssay ;
+    rdfs:label "CYP Time-Dep Inhibition" ;
+    rdfs:comment """BAO:0010169 — Mechanism-based inactivation
+IC50 shift & kinact/KI determination""" .
+
+bao:BAO_0010189 a vtx:ADMEAssay ;
+    rdfs:label "Efflux Transporter Inhibition" ;
+    rdfs:comment """BAO:0010189 — P-gp/BCRP/MRP2 inhibition
+DDI victim assessment""" .
+
+bao:BAO_0010205 a vtx:ADMEAssay ;
+    rdfs:label "Efflux Transporter Substrate" ;
+    rdfs:comment """BAO:0010205 — P-gp/BCRP substrate assessment
+Bidirectional assay with efflux ratio""" .
+
+bao:BAO_0010243 a vtx:ToxicityAssay ;
+    rdfs:label "Chemical Stability" ;
+    rdfs:comment """BAO:0010243 — Chemical stability assay
+pH, light, oxidative stability of compound
+Informs formulation and storage conditions""" .
+
+bao:BAO_0010246 a vtx:ADMEAssay ;
+    rdfs:label "Thermodynamic Solubility" ;
+    rdfs:comment """BAO:0010246 — Equilibrium solubility of crystalline
+material in aqueous buffer""" .
+
+bao:BAO_0010258 a vtx:ReadoutContent ;
+    rdfs:label "Concentration- Response Assay" ;
+    vtx:generates bao:BAO_0010008,
+        bao:BAO_0010159,
+        bao:BAO_0013041 ;
+    rdfs:comment """BAO:0010258 — Dose-response curve measurement.
+Generates IC50, EC50, Hill coefficient, Emax.
+Standard for confirmatory & secondary screens.
+Required for all ADME dose-finding studies.""" .
+
+bao:BAO_0010264 a vtx:DetectionMethod ;
+    rdfs:label "Biosensor Method" ;
+    vtx:monitors obo:NCIT_C181923 ;
+    rdfs:comment """BAO:0010264 — Biological recognition + physical transducer
+Enzyme electrode, aptamer sensor, cell-based biosensor
+Emerging for continuous glucose monitoring (T1D/VX-880)""" .
+
+bao:BAO_0013018 a vtx:ToxicityAssay ;
+    rdfs:label "Toxicology (BAO Type)" ;
+    rdfs:comment """BAO:0013018 — Investigation of adverse effects
+of chemical substances on living organisms
+Encompasses all in vivo & in vitro tox studies""" ;
+    rdfs:subClassOf vtx:invivo_tox .
+
+bao:BAO_0020004 a vtx:SampleType ;
+    rdfs:label "Blood / Plasma / Serum" ;
+    vtx:compatible bao:BAO_0000049,
+        bao:BAO_0000055,
+        bao:BAO_0000657 ;
+    <http://example.com/pharma/domain#✓> bao:BAO_0000366 ;
+    rdfs:comment """BAO:0020004 serum format · OBI blood specimen
+Eligible for: PK/bioanalytical, PPB, biomarker,
+hematology (NOT cell-based HTS)""" .
+
+bao:BAO_0050013 a vtx:DetectionMethod ;
+    rdfs:label "Proximity-Based Method" ;
+    vtx:measures_engagement vtx:cftr_cor ;
+    rdfs:comment """BAO:0050013 — Measures spatial proximity of tagged molecules
+NanoBRET, NanoBiT, PLA — protein-protein interaction
+Target engagement in live cells for CFTR correctors""" .
+
+<https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8941> a vtx:MolecularTarget ;
+    rdfs:label "SERPINA1 (AAT gene)" ;
+    rdfs:comment """HGNC:8941 / NCIT:C105011 — Serine protease inhibitor
+Mutations cause AAT deficiency (Z-allele most common)""" .
+
+<http://edamontology.org/topic_3307> a vtx:ComputationalMethod ;
+    rdfs:label "Computational Biology" ;
+    vtx:subfield <http://edamontology.org/topic_0082>,
+        <http://edamontology.org/topic_3892> ;
+    rdfs:comment """EDAM:topic_3307 / MeSH:D019295
+Theory, models & simulation of biological systems""" .
+
+obo:CHEBI_90950 a vtx:ApprovedDrug ;
+    rdfs:label "Orkambi (lumacaftor/ ivacaftor)" ;
+    obo:RO_0002606 obo:MONDO_0009061 ;
+    vtx:containsAgent obo:CHEBI_66902,
+        vtx:cftr_cor ;
+    vtx:hasModality vtx:sm ;
+    rdfs:comment """CHEBI:90950 — CFTR corrector + potentiator · Approved 2015
+MeSH:C000599212""" .
+
+obo:MONDO_0012931 a vtx:Disease ;
+    rdfs:label "APOL1-mediated Kidney Disease" ;
+    rdfs:comment """Focal Segmental Glomerulosclerosis (FSGS)
+MONDO:0012931 · APOL1 risk variants G1/G2""" .
+
+obo:NCIT_C114811 a vtx:MolecularTarget ;
+    rdfs:label "NaV1.7 (SCN9A)" ;
+    rdfs:comment """NCIT:C114811 SCN9A — Pain signaling channel
+Loss-of-function → congenital insensitivity to pain""" .
+
+obo:NCIT_C1962 a vtx:TreatmentModality ;
+    rdfs:label "Gene Therapy" ;
+    rdfs:comment """NCIT:C1962 — Nucleic acid-based therapeutic agents
+Includes mRNA, siRNA, antisense""" .
+
+obo:NCIT_C208191 a vtx:TreatmentModality ;
+    rdfs:label "Cell Therapy" ;
+    rdfs:comment """NCIT:C208191 — Autologous/allogeneic cell transplantation
+Includes islet cells and gene-edited HSPCs""" .
+
+obo:NCIT_C616 a vtx:LabWorkflowEntity ;
+    rdfs:label "Lipid" ;
+    vtx:usedIn vtx:lipid_np ;
+    rdfs:comment """NCIT:C616 — Hydrocarbon-containing organic compounds
+Key component of LNP delivery systems""" .
+
+obo:NCIT_C84397 a vtx:PipelineTherapy ;
+    rdfs:label "VX-634 / VX-864 (AAT program)" ;
+    obo:RO_0002436 vtx:aat_def ;
+    vtx:correctsProtein <https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8941> ;
+    vtx:hasModality vtx:sm ;
+    rdfs:comment """Small-molecule correctors for Alpha-1 Antitrypsin Deficiency
+NCIT:C84397 · SERPINA1 gene target""" .
+
+obo:OBI_0100051 a vtx:LabWorkflowEntity ;
+    rdfs:label "Specimen" ;
+    vtx:collectedAs <http://purl.allotrope.org/ontologies/result#AFR_0001118> ;
+    rdfs:comment """OBI:0100051 — A material entity collected for investigation
+Includes biological specimens, environmental samples""" .
+
+obo:SCDO_1000106 a vtx:Disease ;
+    rdfs:label "Sickle Cell Disease" ;
+    rdfs:comment """SCDO:1000106 / MONDO:0011382 — HBB gene mutation
+Sickle-shaped RBCs → pain crises, organ damage""" .
+
+vtx:aat_def a vtx:Disease ;
+    rdfs:label "AAT Deficiency" ;
+    rdfs:comment """NCIT:C84397 / MONDO:0013282 — SERPINA1 mutations
+α1-antitrypsin deficiency → liver & lung disease""" .
+
+vtx:acute_pain a vtx:Disease ;
+    rdfs:label "Acute Pain" ;
+    rdfs:comment """MeSH:D059787 — Post-surgical & injury pain
+NaV1.8-mediated nociceptive signaling""" .
+
+vtx:cheminf a vtx:ComputationalMethod ;
+    rdfs:label "Cheminformatics" ;
+    vtx:optimizes vtx:sm ;
+    vtx:predicts bao:BAO_0000009,
+        bao:BAO_0002167 ;
+    rdfs:comment """MeSH:D000080911 — Computational retrieval & analysis
+of chemical data for drug discovery""" .
+
+vtx:chronic_pain a vtx:Disease ;
+    rdfs:label "Chronic Pain" ;
+    rdfs:comment """MeSH:D059350 — Neuropathic & persistent pain
+NaV1.8 / NaV1.7 targets""" .
+
+vtx:hepatotox a vtx:ToxicityAssay ;
+    rdfs:label "Hepatotoxicity Assay" ;
+    vtx:biomarker_for vtx:aat_def ;
+    vtx:monitors obo:NCIT_C84397 ;
+    rdfs:comment """Liver injury assessment
+ALT, AST, bilirubin, DILI prediction
+Key for AAT deficiency program (liver disease)""" .
+
+vtx:invivo_tox a vtx:ToxicityAssay ;
+    rdfs:label "In Vivo Toxicology" ;
+    vtx:determines vtx:mtd ;
+    bao:BAO_0000208 vtx:ld50 ;
+    rdfs:comment """GLP-compliant repeat-dose toxicity studies
+Rodent & non-rodent species (rat, dog, NHP)
+Required for IND-enabling package""" .
+
+vtx:result a vtx:LabWorkflowEntity ;
+    rdfs:label "Result" ;
+    vtx:expressedAs vtx:result_datum ;
+    rdfs:comment """Assay output — quantitative measurement or qualitative observation
+BAO assay result component / AFO result namespace""" .
+
+vtx:result_datum a vtx:LabWorkflowEntity ;
+    rdfs:label "Result Datum" ;
+    rdfs:comment """AFO scalar/tensor datum — Numeric or categorical
+output from measurement""" .
+
+vtx:st_nucleic a vtx:SampleType ;
+    rdfs:label "Nucleic Acid (mRNA / DNA)" ;
+    vtx:compatible bao:BAO_0000046,
+        bao:BAO_0000049,
+        bao:BAO_0000055 ;
+    vtx:sample_for vtx:mrna_cf ;
+    <http://example.com/pharma/domain#✓> bao:BAO_0000100,
+        bao:BAO_0000219 ;
+    rdfs:comment """RNA or DNA therapeutic material
+Eligible for: integrity, encapsulation efficiency,
+transfection, LNP characterization""" .
+
+vtx:test_type_hub a vtx:TestType ;
+    rdfs:label "Test Type (~30,000 types)" ;
+    vtx:categorized_by bao:BAO_0000008,
+        bao:BAO_0000019,
+        bao:BAO_0000029,
+        bao:BAO_0000035,
+        bao:BAO_0002169 ;
+    vtx:constrained_by vtx:applicability ;
+    rdfs:comment """BAO + OBI + domain-specific test catalog
+~30,000 distinct assay/test definitions
+Categorized by: format, stage, target, modality""" .
+
+vtx:virtual_screen a vtx:ComputationalMethod ;
+    rdfs:label "Virtual Screening" ;
+    vtx:identifies vtx:sm ;
+    vtx:step_in vtx:drug_disc ;
+    rdfs:comment """In silico screening of compound libraries
+against target binding sites""" .
+
+vtx:well a vtx:LabWorkflowEntity ;
+    rdfs:label "Well" ;
+    obo:BFO_0000050 <http://purl.allotrope.org/ontologies/result#AFR_0002888> ;
+    rdfs:comment """Individual well position in a microplate
+Contains sample material for testing""" .
+
+bao:BAO_0000009 a vtx:ADMEAssay ;
+    rdfs:label "ADME / ADMET" ;
+    ns1:Safety bao:BAO_0002533 ;
+    vtx:profiles obo:CHEBI_233446,
+        obo:DRON_01061597,
+        obo:NCIT_C138152,
+        vtx:trikafta ;
+    rdfs:comment """BAO:0000009 — Absorption, Distribution, Metabolism, Excretion & Toxicity
+Bioassay type verifying bioavailability, metabolic stability,
+drug-drug interaction potential, and safety of compounds""" ;
+    rdfs:subClassOf vtx:distrib,
+        bao:BAO_0000008,
+        bao:BAO_0002182,
+        bao:BAO_0002188,
+        bao:BAO_0010082,
+        bao:BAO_0010090,
+        bao:BAO_0010139 .
+
+bao:BAO_0000035 a vtx:DetectionMethod ;
+    rdfs:label "Physical Detection Method" ;
+    vtx:governs vtx:applicability ;
+    rdfs:comment """BAO:0000035 — Physical method / technology used to
+measure the readout of an assay.  Governs instrument
+selection, plate-reader compatibility, and data type.
+~12 major families, hundreds of specific technologies.""" ;
+    rdfs:subClassOf bao:BAO_0000045,
+        bao:BAO_0000046,
+        bao:BAO_0000049,
+        bao:BAO_0000055,
+        bao:BAO_0000427,
+        bao:BAO_0000452,
+        bao:BAO_0000657,
+        bao:BAO_0010264,
+        bao:BAO_0050013 .
+
+bao:BAO_0000040 a vtx:LabWorkflowEntity ;
+    rdfs:label "Measure Group" ;
+    rdfs:comment """BAO:0000040 — Groups multiple result sets
+Supports multiplexed/panel assays""" .
+
+bao:BAO_0000057 a vtx:DetectionMethod ;
+    rdfs:label "SPR (Surface Plasmon Resonance)" ;
+    vtx:measures_KD obo:NCIT_C138151,
+        vtx:cftr,
+        vtx:nav18 ;
+    rdfs:comment """BAO:0000057 → optical-based biosensor
+Real-time kinetics: ka, kd, KD measurement
+Biacore platform — target engagement for all programs""" .
+
+bao:BAO_0000363 a vtx:DetectionMethod ;
+    rdfs:label "Fluorescence Intensity (FI)" ;
+    vtx:readout_for vtx:cell_viab,
+        bao:BAO_0010008 ;
+    rdfs:comment """BAO:0000363 — Direct measure of fluorescence emission
+Simplest & highest-throughput fluorescence readout""" .
+
+bao:BAO_0000508 a vtx:LabWorkflowEntity ;
+    rdfs:label "Microplate" ;
+    vtx:hasFormat bao:BAO_0000513,
+        bao:BAO_0000515,
+        bao:BAO_0000516,
+        bao:BAO_0000576 ;
+    rdfs:comment """BAO:0000508 — 96/384/1536 well plates
+Standard formats for HTS assays""" .
+
+bao:BAO_0002094 a vtx:ComputationalMethod ;
+    rdfs:label "Computational Method (BAO)" ;
+    vtx:informs bao:BAO_0000015 ;
+    vtx:predicts bao:BAO_0002993 ;
+    rdfs:comment """BAO:0002094 — Application of IT to chem & bio
+Assay method component in BAO""" .
+
+bao:BAO_0002167 a vtx:ToxicityAssay ;
+    rdfs:label "Genotoxicity Assay" ;
+    rdfs:comment """BAO:0002167 — Assays detecting DNA damage, mutations,
+or chromosomal aberrations caused by compounds""" ;
+    rdfs:subClassOf vtx:chromo_ab,
+        vtx:comet,
+        bao:BAO_0013054,
+        bao:BAO_0013055 .
+
+bao:BAO_0002169 a vtx:ReadoutContent ;
+    rdfs:label "Assay Readout Content" ;
+    vtx:governed_by bao:BAO_0000409,
+        bao:BAO_0000532,
+        bao:BAO_0002067 ;
+    vtx:governs vtx:applicability ;
+    vtx:hasType bao:BAO_0000184,
+        bao:BAO_0000534,
+        bao:BAO_0000564 ;
+    vtx:specifies bao:BAO_0002969 ;
+    rdfs:comment """BAO:0002169 — Classifies the type & richness of data
+generated by an assay per well/sample.
+Single (1–2 values) vs Multiplexed (multi-target)
+vs Image-based (hundreds of parameters per cell).""" .
+
+bao:BAO_0002526 a vtx:DetectionMethod ;
+    rdfs:label "Microscopy" ;
+    vtx:readout_for bao:BAO_0013053,
+        bao:BAO_0013055 ;
+    rdfs:comment """BAO:0002526 — Optical, confocal, electron microscopy
+HCS: neurite length, nuclear translocation, phenotypic assays""" .
+
+bao:BAO_0002532 a vtx:ADMEAssay ;
+    rdfs:label "Tissue Distribution" ;
+    vtx:characterizes vtx:lnp ;
+    rdfs:comment """BAO:0002532 — In vivo tissue distribution assay
+CNS penetration, organ exposure""" .
+
+bao:BAO_0010009 a vtx:ADMEAssay ;
+    rdfs:label "Physicochemical Assay" ;
+    rdfs:comment """BAO:0010009 — Solubility, pKa, logP, logD, stability
+Inherent molecular property measurement""" .
+
+bao:BAO_0010010 a vtx:ADMEAssay ;
+    rdfs:label "Solubility Assay" ;
+    vtx:informs <http://purl.allotrope.org/ontologies/result#AFR_0001218> ;
+    vtx:measured_by bao:BAO_0010009 ;
+    rdfs:comment """BAO:0010010 — Aqueous solubility measurement
+Critical for oral absorption & formulation""" ;
+    rdfs:subClassOf bao:BAO_0010246 .
+
+bao:BAO_0010025 a vtx:TestType ;
+    rdfs:label "Preclinical Development" ;
+    rdfs:comment """BAO:0010025 — Lead candidate → IND
+Full PK/PD profiling, toxicity, formulation
+In vivo dosing & efficacy studies""" .
+
+bao:BAO_0010091 a vtx:ADMEAssay ;
+    rdfs:label "Metabolite ID & Profiling" ;
+    rdfs:comment """BAO:0010091 — Structural identification of metabolites
+LC-MS/MS characterization""" .
+
+bao:BAO_0010095 a vtx:ADMEAssay ;
+    rdfs:label "Metabolic Stability" ;
+    rdfs:comment """BAO:0010095 — Intrinsic clearance measurement
+Half-life or % remaining""" ;
+    rdfs:subClassOf bao:BAO_0010006,
+        bao:BAO_0010100 .
+
+bao:BAO_0010123 a vtx:ADMEAssay ;
+    rdfs:label "CYP Reaction Phenotyping" ;
+    rdfs:comment """BAO:0010123 — Identifies which CYP isoform(s)
+are responsible for metabolism of a compound""" .
+
+bao:BAO_0010135 a vtx:ADMEAssay ;
+    rdfs:label "Plasma Protein Binding" ;
+    vtx:measures vtx:sm ;
+    rdfs:comment """BAO:0010135 — Measures fraction bound to plasma proteins
+Albumin & α1-acid glycoprotein binding
+Drives free fraction (fu) estimation""" .
+
+bao:BAO_0010245 a vtx:ToxicityAssay ;
+    rdfs:label "GSH Adduct Formation" ;
+    vtx:parent_assay bao:BAO_0010243 ;
+    vtx:screens vtx:sm ;
+    rdfs:comment """BAO:0010245 — Glutathione trapping assay
+Detects electrophilic reactive metabolites
+Indicator of potential idiosyncratic toxicity""" .
+
+bao:BAO_0010262 a vtx:ToxicityAssay ;
+    rdfs:label "T-Cell Cytotoxicity" ;
+    vtx:evaluates obo:NCIT_C169042 ;
+    rdfs:comment """BAO:0010262 — Immune-mediated cell killing assay
+Measures cytotoxic T-lymphocyte activity
+Relevant for Casgevy immunogenicity assessment""" .
+
+bao:BAO_0013053 a vtx:ToxicityAssay ;
+    rdfs:label "Nephrotoxicity Biomarker" ;
+    vtx:biomarker_for obo:MONDO_0012931 ;
+    vtx:monitors obo:NCIT_C138152 ;
+    rdfs:comment """BAO:0013053 — Kidney injury biomarker assay
+KIM-1, NGAL, cystatin C measurement
+Critical for Inaxaplin (APOL1 kidney program)""" .
+
+bao:BAO_0013054 a vtx:ToxicityAssay ;
+    rdfs:label "Ames Test" ;
+    vtx:required_for vtx:sm ;
+    rdfs:comment """BAO:0013054 — Bacterial reverse mutation assay
+Salmonella typhimurium / E. coli strains deficient in DNA repair
+Predicts genotoxicity & potential carcinogenicity
+ICH S2(R1) regulatory requirement""" .
+
+bao:BAO_0013055 a vtx:ToxicityAssay ;
+    rdfs:label "Micronucleus Assay" ;
+    vtx:required_for vtx:sm ;
+    rdfs:comment """BAO:0013055 — Detects chromosomal damage via micronuclei
+Small extranuclear bodies with chromosome fragments
+In vitro (mammalian cell) or in vivo (rodent bone marrow)
+ICH S2(R1) regulatory requirement""" .
+
+<http://edamontology.org/topic_0082> a vtx:ComputationalMethod ;
+    rdfs:label "Structure Prediction" ;
+    vtx:feeds vtx:mol_dock ;
+    rdfs:comment """EDAM:topic_0082 — Protein 3D structure prediction
+Homology modeling, AlphaFold, ab initio""" .
+
+<http://edamontology.org/topic_3892> a vtx:ComputationalMethod ;
+    rdfs:label "Biomolecular Simulation" ;
+    vtx:includes <http://edamontology.org/topic_0176>,
+        vtx:mm_sim,
+        vtx:qmmm ;
+    rdfs:comment """EDAM:topic_3892 — MD, CG, QM/MM, Markov State Models
+Parent class for simulation methods""" .
+
+<http://purl.allotrope.org/ontologies/result#AFR_0001118> a vtx:LabWorkflowEntity ;
+    rdfs:label "Sample" ;
+    vtx:classified_by vtx:sample_type_hub ;
+    vtx:loadedInto vtx:well ;
+    vtx:testedIn obo:OBI_0000070 ;
+    rdfs:comment """AFO:AFR_0001118 — sample identifier
+Measurement metadata identifying a sample being measured""" .
+
+<http://purl.allotrope.org/ontologies/result#AFR_0002888> a vtx:LabWorkflowEntity ;
+    rdfs:label "Well Plate" ;
+    vtx:inputTo obo:OBI_0000070 ;
+    rdfs:comment """AFO:AFR_0002888 — well plate identifier
+Container with array of wells for parallel testing""" ;
+    rdfs:subClassOf obo:OBI_0400076 .
+
+obo:DRON_00087770 a vtx:ApprovedDrug ;
+    rdfs:label "Kalydeco (ivacaftor)" ;
+    obo:RO_0002606 obo:MONDO_0009061 ;
+    vtx:hasModality vtx:sm ;
+    rdfs:comment """DRON:00087770 — CFTR potentiator · Approved 2012
+CHEBI:66901 ivacaftor""" ;
+    rdfs:subClassOf obo:CHEBI_66902 .
+
+obo:NCIT_C138151 a vtx:MolecularTarget ;
+    rdfs:label "APOL1" ;
+    rdfs:comment """NCIT:C138151 / SCDO:0000069 — Apolipoprotein L1
+Risk variants G1/G2 → kidney disease in African ancestry""" .
+
+obo:NCIT_C138152 a vtx:PipelineTherapy ;
+    rdfs:label "Inaxaplin (VX-147)" ;
+    obo:RO_0002436 obo:MONDO_0005342,
+        obo:MONDO_0012931 ;
+    obo:RO_0002449 obo:NCIT_C138151 ;
+    vtx:hasModality vtx:sm ;
+    rdfs:comment """APOL1 inhibitor — Phase II/III
+For APOL1-mediated kidney disease · NCIT:C138152 APOL1""" .
+
+obo:NCIT_C180742 a vtx:PharmaceuticalCompany ;
+    rdfs:label "PharmaCorp" ;
+    vtx:develops obo:NCIT_C138152,
+        obo:NCIT_C181923,
+        obo:NCIT_C84397,
+        vtx:mrna_cf,
+        vtx:vx_548_crps,
+        vtx:vx_pain2 ;
+    vtx:markets obo:CHEBI_233446,
+        obo:CHEBI_90950,
+        obo:DRON_00087770,
+        obo:DRON_01061597,
+        obo:NCIT_C169042,
+        vtx:symdeko,
+        vtx:trikafta ;
+    rdfs:comment "NCIT:C180742 — Vertex Pharmaceuticals Inc." .
+
+obo:NCIT_C181923 a vtx:PipelineTherapy ;
+    rdfs:label "VX-880 (islet cell therapy)" ;
+    obo:RO_0002436 obo:MONDO_0005147 ;
+    vtx:hasModality obo:NCIT_C208191 ;
+    rdfs:comment """NCIT:C181923 — Allogeneic stem cell-derived pancreatic islet cells
+Phase I/II for Type 1 Diabetes""" .
+
+obo:OBI_0000070 a vtx:LabWorkflowEntity ;
+    rdfs:label "Assay" ;
+    vtx:instanceOf vtx:test_type_hub ;
+    vtx:produces vtx:result ;
+    rdfs:comment """OBI:0000070 — A planned process with objective to produce
+information about the material entity input""" ;
+    rdfs:subClassOf obo:OBI_0000443,
+        bao:BAO_0000015,
+        bao:BAO_0002182 .
+
+vtx:cardiotox a vtx:ToxicityAssay ;
+    rdfs:label "Cardiotoxicity Assay" ;
+    vtx:extends bao:BAO_0013041 ;
+    rdfs:comment """Cardiac safety beyond hERG
+iPSC-derived cardiomyocyte assays, QT prolongation
+Action potential duration, contractility""" .
+
+vtx:cell_viab a vtx:ToxicityAssay ;
+    rdfs:label "Cell Viability Assay" ;
+    bao:BAO_0000208 bao:BAO_0000202 ;
+    rdfs:comment """Measures living cells via metabolic activity
+CellTiter-Glo (ATP luminescence), resazurin, MTT/MTS
+Counter-screen to confirm on-target activity vs. cytotoxicity""" .
+
+vtx:st_biologic a vtx:SampleType ;
+    rdfs:label "Biologic / Protein" ;
+    vtx:compatible bao:BAO_0000046,
+        bao:BAO_0000055,
+        bao:BAO_0000427 ;
+    <http://example.com/pharma/domain#✓> bao:BAO_0000219,
+        bao:BAO_0000357 ;
+    rdfs:comment """Antibodies, recombinant proteins, peptides
+Eligible for: binding assays, bioactivity, aggregation,
+immunogenicity, PK/PD (NOT small-molecule ADME)""" .
+
+vtx:st_cell_therapy a vtx:SampleType ;
+    rdfs:label "Cell Therapy Product" ;
+    vtx:compatible bao:BAO_0000005,
+        bao:BAO_0000045,
+        bao:BAO_0000452 ;
+    vtx:sample_for obo:NCIT_C169042 ;
+    <http://example.com/pharma/domain#✓> bao:BAO_0000218,
+        bao:BAO_0000219 ;
+    rdfs:comment """Gene-edited or stem cell product (e.g., Casgevy)
+Eligible for: viability, identity, potency, sterility,
+engraftment, immunophenotyping
+NOT eligible for chemical ADME/physicochemical assays""" .
+
+bao:BAO_0000008 a vtx:TestType ;
+    rdfs:label "Bioassay Type" ;
+    vtx:governs vtx:applicability ;
+    rdfs:comment """BAO:0000008 — Categorization based on property/process
+ADMET, functional, binding, toxicity, efficacy, PK...
+Each type can have thousands of specific assay definitions""" .
+
+bao:BAO_0000031 a vtx:TestType ;
+    rdfs:label "Primary Screen" ;
+    vtx:feeds bao:BAO_0000030 ;
+    vtx:preceded_by vtx:virtual_screen ;
+    rdfs:comment """BAO:0000031 — First assay in screening campaign
+Single concentration, identify hits
+~1M compounds → ~10K hits""" .
+
+bao:BAO_0000050 a vtx:DetectionMethod ;
+    rdfs:label "Bioluminescence" ;
+    vtx:readout_for vtx:cell_viab,
+        bao:BAO_0002993 ;
+    rdfs:comment """BAO:0000050 — Light from living organisms (luciferase/luciferin)
+CellTiter-Glo viability, NanoBiT PPI, reporter gene assays""" .
+
+bao:BAO_0000070 a vtx:DetectionMethod ;
+    rdfs:label "Absorbance (UV-Vis)" ;
+    vtx:readout_for bao:BAO_0010009,
+        bao:BAO_0010010,
+        bao:BAO_0013054 ;
+    rdfs:comment """BAO:0000070 — Logarithmic light absorption measurement
+MTT/MTS viability, Bradford protein, solubility (ADME)""" .
+
+bao:BAO_0000163 a vtx:DetectionMethod ;
+    rdfs:label "Electrical Sensor" ;
+    vtx:measures bao:BAO_0013041 ;
+    vtx:primary_for obo:NCIT_C114811,
+        vtx:nav18 ;
+    vtx:screens vtx:cardiotox ;
+    rdfs:comment """BAO:0000163 — Impedance / patch-clamp electrophysiology
+Ion channel function: NaV1.8 (Journavx), hERG safety
+QPatch, IonWorks — primary for pain program""" .
+
+bao:BAO_0000179 a vtx:LabWorkflowEntity ;
+    rdfs:label "Endpoint" ;
+    vtx:quantifiedBy vtx:result ;
+    rdfs:comment """BAO:0000179 — Quantitative/qualitative result
+Series of data points per screened entity""" .
+
+bao:BAO_0000366 a vtx:TestType ;
+    rdfs:label "Cell-Free Format" ;
+    rdfs:comment """BAO:0000366 — Originates from cell but no intact cells
+Lysates, microsomes, S9 fraction
+Applicable to: compounds (metabolism, stability)""" .
+
+bao:BAO_0000427 a vtx:DetectionMethod ;
+    rdfs:label "Label-Free Method" ;
+    rdfs:comment """BAO:0000427 — No fluorescent/radioactive labels required
+Measures native binding: SPR, impedance, NMR, X-ray, ITC, CD""" ;
+    rdfs:subClassOf bao:BAO_0000057,
+        bao:BAO_0000160,
+        bao:BAO_0000161,
+        bao:BAO_0000163,
+        bao:BAO_0000404,
+        bao:BAO_0000428,
+        bao:BAO_0000456 .
+
+bao:BAO_0000657 a vtx:DetectionMethod ;
+    rdfs:label "Radiometry" ;
+    vtx:usedIn bao:BAO_0000357 ;
+    rdfs:comment """BAO:0000657 — Radioactive tracer detection
+Filter binding assay, SPA (scintillation proximity assay)
+Reference standard for binding affinity (³H/¹²⁵I radioligand)""" .
+
+bao:BAO_0002182 a vtx:ADMEAssay ;
+    rdfs:label "Pharmacokinetic Assay" ;
+    rdfs:comment """BAO:0002182 — In vivo PK study
+AUC, Cmax, t½, clearance, Vd, bioavailability""" .
+
+bao:BAO_0002993 a vtx:ToxicityAssay ;
+    rdfs:label "Cytotoxicity Assay" ;
+    bao:BAO_0000208 bao:BAO_0000006,
+        bao:BAO_0000187 ;
+    rdfs:comment """BAO:0002993 — Measures cell death induced by compounds
+LDH release, MTT/MTS reduction, ATP depletion, dye exclusion""" ;
+    rdfs:subClassOf vtx:cell_viab,
+        vtx:hemolysis,
+        bao:BAO_0010262 .
+
+bao:BAO_0010008 a vtx:ADMEAssay ;
+    rdfs:label "Caco-2 Permeability" ;
+    vtx:evaluates vtx:sm ;
+    rdfs:comment """BAO:0010008 — Human colon carcinoma cell monolayer
+Bidirectional transport (A→B, B→A)
+Predicts intestinal epithelial absorption""" .
+
+bao:BAO_0010159 a vtx:ADMEAssay ;
+    rdfs:label "CYP Inhibition" ;
+    vtx:screens vtx:sm ;
+    rdfs:comment """BAO:0010159 — Cytochrome P450 inhibition screen
+DDI risk: CYP3A4, 2D6, 2C9, 1A2, 2C19""" .
+
+<http://purl.allotrope.org/ontologies/result#AFR_0001218> a vtx:LabWorkflowEntity ;
+    rdfs:label "Formulation" ;
+    vtx:describedBy vtx:form_desc ;
+    vtx:formulates obo:CHEBI_233446,
+        obo:CHEBI_90950,
+        obo:DRON_00087770,
+        obo:DRON_01061597,
+        vtx:trikafta ;
+    vtx:hasComponent vtx:component ;
+    vtx:preparedAs <http://purl.allotrope.org/ontologies/result#AFR_0001118> ;
+    rdfs:comment """AFO:AFR_0001218 — Formulation description
+Composition of ingredients for a material""" .
+
+obo:DRON_01061597 a vtx:ApprovedDrug ;
+    rdfs:label "Alyftrek (vanzacaftor/ tezacaftor/ deutivacaftor)" ;
+    obo:RO_0002606 obo:MONDO_0009061 ;
+    vtx:containsAgent obo:CHEBI_66902,
+        vtx:cftr_cor ;
+    vtx:hasModality vtx:sm ;
+    rdfs:comment """DRON:01061597 — Next-gen triple combo · Approved 2025
+NCIT:C188560 vanzacaftor · NCIT:C169892 deutivacaftor""" .
+
+vtx:lnp a vtx:TreatmentModality ;
+    rdfs:label "Lipid Nanoparticle (LNP)" ;
+    vtx:hasModality obo:NCIT_C1962 ;
+    rdfs:comment """Lipid-based delivery vehicle for mRNA/siRNA
+NCIT lipid nanoparticle formulations""" .
+
+vtx:mol_dock a vtx:ComputationalMethod ;
+    rdfs:label "Molecular Docking" ;
+    vtx:enables vtx:virtual_screen ;
+    vtx:models obo:NCIT_C138151,
+        vtx:cftr,
+        vtx:nav18 ;
+    rdfs:comment """MeSH:D062105 — Ligand-protein interaction modeling
+Virtual screening of compound libraries""" .
+
+vtx:trikafta a vtx:ApprovedDrug ;
+    rdfs:label "Trikafta (elexacaftor/ tezacaftor/ ivacaftor)" ;
+    obo:RO_0002606 obo:MONDO_0009061 ;
+    vtx:containsAgent obo:CHEBI_66902,
+        vtx:cftr_cor ;
+    vtx:hasModality vtx:sm ;
+    rdfs:comment """MeSH:C000706587 — Triple combo CFTR modulator · Approved 2019
+CHEBI:234518 elexacaftor""" .
+
+bao:BAO_0000005 a vtx:DetectionMethod ;
+    rdfs:label "Flow Cytometry" ;
+    vtx:assays vtx:st_cell_therapy ;
+    vtx:characterizes obo:NCIT_C169042 ;
+    vtx:readout_for bao:BAO_0010262 ;
+    rdfs:comment """BAO:0000005 — Light scattering + fluorescence from cells
+Multi-parameter single-cell analysis, 0.5–40µm particles
+Critical for cell therapy (Casgevy) characterization""" .
+
+bao:BAO_0000015 a vtx:LabWorkflowEntity ;
+    rdfs:label "Bioassay" ;
+    vtx:hasType bao:BAO_0000009 ;
+    vtx:instanceOf vtx:test_type_hub ;
+    vtx:used_by obo:NCIT_C180742 ;
+    bao:BAO_0000208 bao:BAO_0000179 ;
+    bao:BAO_0000209 bao:BAO_0000040 ;
+    rdfs:comment """BAO:0000015 — Test effect of perturbing agent
+in biological model system""" .
+
+bao:BAO_0000030 a vtx:TestType ;
+    rdfs:label "Confirmatory Screen" ;
+    vtx:feeds bao:BAO_0000032 ;
+    rdfs:comment """BAO:0000030 — Confirms primary hits
+Dose-response or replicate measurement
+~10K hits → ~500 confirmed""" .
+
+bao:BAO_0000032 a vtx:TestType ;
+    rdfs:label "Secondary Assay" ;
+    vtx:feeds bao:BAO_0010025 ;
+    rdfs:comment """BAO:0000032 — Further characterization
+Selectivity, MOA, orthogonal confirmation
+~500 → ~50 lead series""" .
+
+bao:BAO_0000045 a vtx:DetectionMethod ;
+    rdfs:label "Luminescence Method" ;
+    rdfs:comment """BAO:0000045 — Light emission from chemical/biological reaction
+No excitation light needed → low background, high sensitivity""" ;
+    rdfs:subClassOf bao:BAO_0000050,
+        bao:BAO_0000051,
+        bao:BAO_0000130 .
+
+bao:BAO_0000357 a vtx:TestType ;
+    rdfs:label "Biochemical Format" ;
+    rdfs:comment """BAO:0000357 — Purified protein / enzyme target
+Homogeneous assay · No intact cells
+Applicable to: compounds, biologics""" .
+
+bao:BAO_0013041 a vtx:ADMEAssay ;
+    rdfs:label "hERG Binding" ;
+    vtx:screens vtx:sm ;
+    rdfs:comment """BAO:0013041 — hERG K+ channel binding assay
+Cardiac arrhythmia risk (QT prolongation)""" .
+
+obo:CHEBI_233446 a vtx:ApprovedDrug ;
+    rdfs:label "Journavx (suzetrigine)" ;
+    obo:RO_0002449 vtx:nav18 ;
+    obo:RO_0002606 vtx:acute_pain ;
+    vtx:hasModality vtx:sm ;
+    rdfs:comment """CHEBI:233446 / NCIT:C199115 — NaV1.8 inhibitor for acute pain
+Approved 2025 · WikiPathways:WP5558""" .
+
+obo:NCIT_C169042 a vtx:ApprovedDrug ;
+    rdfs:label "Casgevy (exagamglogene autotemcel)" ;
+    obo:RO_0002606 obo:MONDO_0016668,
+        obo:SCDO_1000106 ;
+    vtx:disruptsEnhancer vtx:bcl11a ;
+    vtx:hasModality obo:NCIT_C175342,
+        obo:NCIT_C208191 ;
+    rdfs:comment """NCIT:C169042 — CRISPR/Cas9 gene-edited CD34+ HSPCs
+Approved 2023 for SCD & β-thalassemia""" .
+
+vtx:cftr_cor a vtx:MolecularTarget ;
+    rdfs:label "CFTR Corrector" ;
+    vtx:correctsProtein vtx:cftr ;
+    rdfs:comment """Stabilizes CFTR protein folding & trafficking
+Elexacaftor, lumacaftor, tezacaftor, vanzacaftor""" .
+
+vtx:mrna_cf a vtx:PipelineTherapy ;
+    rdfs:label "mRNA CF Therapy" ;
+    obo:RO_0002436 obo:MONDO_0009061 ;
+    vtx:encodesProtein vtx:cftr ;
+    vtx:hasModality obo:NCIT_C172787,
+        obo:NCIT_C1962,
+        vtx:lnp ;
+    rdfs:comment """LNP-encapsulated mRNA encoding functional CFTR
+Preclinical inhaled gene therapy for Cystic Fibrosis""" .
+
+vtx:nav18 a vtx:MolecularTarget ;
+    rdfs:label "NaV1.8 (SCN10A)" ;
+    rdfs:comment """MeSH:D062559 — Voltage-gated Na+ channel
+PR:Q9Y5Y9 · Peripheral nociceptor-specific""" .
+
+bao:BAO_0000049 a vtx:DetectionMethod ;
+    rdfs:label "Spectrophotometry" ;
+    rdfs:comment """BAO:0000049 — Measures light absorption/transmission through sample
+Beer-Lambert law: A = εlc.  UV-Vis, colorimetric assays""" ;
+    rdfs:subClassOf bao:BAO_0000070,
+        bao:BAO_0000071,
+        bao:BAO_0002529 .
+
+bao:BAO_0000100 a vtx:TestType ;
+    rdfs:label "Physicochemical Format" ;
+    rdfs:comment """BAO:0000100 — Physical/chemical property measurement
+Solubility, pKa, logP/logD, permeability
+Applicable to: compounds ONLY""" .
+
+obo:CHEBI_66902 a vtx:MolecularTarget ;
+    rdfs:label "CFTR Potentiator" ;
+    obo:RO_0002450 vtx:cftr ;
+    rdfs:comment """CHEBI:66902 — Restores Cl⁻ transport of defective CFTR
+Mechanism: increases channel open probability""" .
+
+vtx:PipelineTherapy a owl:Class ;
+    rdfs:label "PIPELINE" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:TreatmentModality a owl:Class ;
+    rdfs:label "MODALITY" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+bao:BAO_0000046 a vtx:DetectionMethod ;
+    rdfs:label "Fluorescence Method" ;
+    rdfs:comment """BAO:0000046 — Detection using fluorophore excitation/emission
+Most common HTS readout: ~60% of all screening assays""" ;
+    rdfs:subClassOf bao:BAO_0000001,
+        bao:BAO_0000003,
+        bao:BAO_0000005,
+        bao:BAO_0000058,
+        bao:BAO_0000363 .
+
+bao:BAO_0000218 a vtx:TestType ;
+    rdfs:label "Organism-Based Format" ;
+    rdfs:comment """BAO:0000218 — Whole living organism
+Rodent, zebrafish, C. elegans
+Applicable to: compounds, formulations, cell therapies""" .
+
+bao:BAO_0000452 a vtx:DetectionMethod ;
+    rdfs:label "Imaging Method" ;
+    rdfs:comment """BAO:0000452 — Microscopy & tomography-based detection
+High-content screening (HCS), morphological profiling""" ;
+    rdfs:subClassOf bao:BAO_0002525,
+        bao:BAO_0002526 .
+
+vtx:ApprovedDrug a owl:Class ;
+    rdfs:label "APPROVED" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:applicability a vtx:ApplicabilityMatrix ;
+    rdfs:label "Test Applicability Matrix" ;
+    rdfs:comment """GOVERNANCE NODE — The sparse many-to-many join table
+~30,000 Test Types × N Sample Types
+Not all tests are performed on all sample types
+Governed by: assay format, campaign stage, modality, regulatory rules""" .
+
+bao:BAO_0000219 a vtx:TestType ;
+    rdfs:label "Cell-Based Format" ;
+    rdfs:comment """BAO:0000219 — Living eukaryotic cells
+Permanent cell lines, primary cells, stem cells
+Applicable to: compounds, biologics, nucleic acids""" .
+
+obo:MONDO_0009061 a vtx:Disease ;
+    rdfs:label "Cystic Fibrosis" ;
+    rdfs:comment """MONDO:0009061 / MeSH:D003550 — Autosomal recessive disorder
+CFTR dysfunction → thick mucus, lung infections""" .
+
+vtx:MolecularTarget a owl:Class ;
+    rdfs:label "TARGET" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:cftr a vtx:MolecularTarget ;
+    rdfs:label "CFTR Protein" ;
+    vtx:dysfunctionCauses obo:MONDO_0009061 ;
+    rdfs:comment """MeSH:D019005 — Cystic Fibrosis Transmembrane Conductance Regulator
+Chloride channel · HGNC:1884 · Chr 7q31.2""" .
+
+bao:BAO_0000055 a vtx:DetectionMethod ;
+    rdfs:label "Mass Spectrometry" ;
+    vtx:readout_for bao:BAO_0002182,
+        bao:BAO_0010091,
+        bao:BAO_0010095,
+        bao:BAO_0010135,
+        bao:BAO_0010245 ;
+    rdfs:comment """BAO:0000055 — Ionization + mass-to-charge ratio analysis
+LC-MS/MS for metabolite ID, PK bioanalytical, GSH trapping,
+impurity profiling.  Gold standard for ADME quant.""" .
+
+vtx:Disease a owl:Class ;
+    rdfs:label "DISEASE" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:OntologySource a owl:Class ;
+    rdfs:label "ONTOLOGY" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:SampleType a owl:Class ;
+    rdfs:label "STYPE" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:ComputationalMethod a owl:Class ;
+    rdfs:label "COMP" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:TestType a owl:Class ;
+    rdfs:label "TTYPE" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:DomainEntity a owl:Class ;
+    rdfs:label "Domain Entity" .
+
+vtx:sm a vtx:TreatmentModality ;
+    rdfs:label "Small Molecule" ;
+    rdfs:comment "Oral bioavailable compounds — CFTR modulators, NaV1.8 inhibitors, APOL1 inhibitors" .
+
+vtx:ReadoutContent a owl:Class ;
+    rdfs:label "Readout" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:ToxicityAssay a owl:Class ;
+    rdfs:label "TOX" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:LabWorkflowEntity a owl:Class ;
+    rdfs:label "LAB" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:DetectionMethod a owl:Class ;
+    rdfs:label "DetMethod" ;
+    rdfs:subClassOf vtx:DomainEntity .
+
+vtx:ADMEAssay a owl:Class ;
+    rdfs:label "ADME" ;
+    rdfs:subClassOf vtx:DomainEntity .
+

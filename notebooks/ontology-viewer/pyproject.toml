@@ -1,0 +1,10 @@
+[project]
+name = "ontology-viewer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyvis==0.3.2",
+    "rdflib==7.6.0",
+]
